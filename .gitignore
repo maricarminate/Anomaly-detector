@@ -1,0 +1,163 @@
+# ============================================================================
+# .gitignore - Arquivos e pastas a ignorar no controle de versão
+# ============================================================================
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Bytecode compilado
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuições
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ambientes virtuais
+venv/
+ENV/
+env/
+.venv
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ============================================================================
+# IDE e EDITORES
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# vim
+.vim/
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# NOTEBOOKS JUPYTER
+# ============================================================================
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================================
+# SISTEMA OPERACIONAL
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# ============================================================================
+# DADOS E ARQUIVOS GRANDES
+# ============================================================================
+
+# Dados brutos (muito grandes)
+data/raw/*
+!data/raw/.gitkeep
+
+# Dados processados (opcional, se muito grandes)
+data/processed/*
+!data/processed/.gitkeep
+
+# Outputs - modelos, plots, logs
+outputs/models/*
+outputs/plots/*
+outputs/logs/*
+outputs/reports/*
+!outputs/models/.gitkeep
+!outputs/plots/.gitkeep
+!outputs/logs/.gitkeep
+!outputs/reports/.gitkeep
+
+# ============================================================================
+# VARIÁVEIS DE AMBIENTE E CONFIGURAÇÕES SENSÍVEIS
+# ============================================================================
+
+.env
+.env.local
+.env.*.local
+config/secrets.yaml
+credentials.json
+api_keys.txt
+
+# ============================================================================
+# ARQUIVOS TEMPORÁRIOS
+# ============================================================================
+
+*.tmp
+*.temp
+*.log
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.pth
+*.pt
+
+# ============================================================================
+# ARQUIVOS DE LOCK E DEPENDÊNCIAS ESPECÍFICAS
+# ============================================================================
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# ============================================================================
+# EDITORES E FERRAMENTAS
+# ============================================================================
+
+# Black formatter
+.black/
+
+# Pre-commit
+.pre-commit-config.yaml
+
+# ============================================================================
+# DADOS SENSÍVEIS (se aplicável)
+# ============================================================================
+
+*.csv~
+*.xlsx~
+backup/
+archive/
