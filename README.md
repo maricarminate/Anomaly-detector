@@ -353,7 +353,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **Mariana Santos Carminate**
 
 - GitHub: [@maricarminate](https://github.com/maricarminate)
-- LinkedIn: [Seu Perfil](www.linkedin.com/in/mariana-santos-carminate-0a0893133)
+- LinkedIn: [Mariana Santos Carminate](www.linkedin.com/in/mariana-santos-carminate-0a0893133)
 - Email: mari.carminate@gmail.com
 
 ---
@@ -391,4 +391,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 <div align="center">
   <strong>Desenvolvido com ❤️ usando Python, TensorFlow e Scikit-learn</strong>
 </div>
+
 
