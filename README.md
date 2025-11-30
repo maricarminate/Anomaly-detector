@@ -30,7 +30,7 @@ Este projeto implementa **9+ algoritmos** de detecção de anomalias, desde mét
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/anomaly-detection.git
+git clone https://github.com/maricarminate/anomaly-detection.git
 cd anomaly-detection
 
 # Crie ambiente virtual
@@ -391,3 +391,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 <div align="center">
   <strong>Desenvolvido com ❤️ usando Python, TensorFlow e Scikit-learn</strong>
 </div>
+
