@@ -1,4 +1,12 @@
+#!/usr/bin/env python3
 """
+Script para corrigir o Logger
+Execute: python fix_logger.py
+"""
+
+from pathlib import Path
+
+LOGGER_CONTENT = '''"""
 Módulo de Logging
 Sistema de logs centralizado
 """
@@ -74,7 +82,7 @@ class Logger:
 
 def get_logger(name='anomaly_detector', log_file=None):
     """Retorna logger configurado"""
-    return Logger(name=name, log_level=logging.INFO, log_file=log_file)
+    return Logger(name=name, log_file=log_file)
 
 
 def log_section(title):
@@ -82,13 +90,13 @@ def log_section(title):
     def decorator(func):
         def wrapper(*args, **kwargs):
             logger = Logger()
-            logger.info(f"\n{'='*70}")
+            logger.info(f"\\n{'='*70}")
             logger.info(f"{title}")
             logger.info(f"{'='*70}")
             
             result = func(*args, **kwargs)
             
-            logger.info(f"{'='*70}\n")
+            logger.info(f"{'='*70}\\n")
             return result
         return wrapper
     return decorator
@@ -110,3 +118,43 @@ def log_performance(func):
         
         return result
     return wrapper
+
+
+if __name__ == '__main__':
+    logger = get_logger(log_file='test.log')
+    
+    logger.info("Mensagem de info")
+    logger.warning("Mensagem de warning")
+    logger.error("Mensagem de error")
+'''
+
+def fix_logger():
+    """Corrige o arquivo logger.py"""
+    
+    logger_path = Path('src/utils/logger.py')
+    
+    print("=" * 70)
+    print("CORRIGINDO LOGGER")
+    print("=" * 70)
+    
+    # Backup
+    if logger_path.exists():
+        backup_path = logger_path.with_suffix('.py.bak')
+        import shutil
+        shutil.copy(logger_path, backup_path)
+        print(f"✓ Backup criado: {backup_path}")
+    
+    # Escrever novo conteúdo
+    logger_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(logger_path, 'w') as f:
+        f.write(LOGGER_CONTENT)
+    
+    print(f"✓ Logger corrigido: {logger_path}")
+    print("\n" + "=" * 70)
+    print("✅ LOGGER CORRIGIDO!")
+    print("=" * 70)
+    print("\nAgora reinicie o kernel do Jupyter e execute novamente!")
+
+
+if __name__ == '__main__':
+    fix_logger()
